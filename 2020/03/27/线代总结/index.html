@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Kaileby和他的朋友们">
+    <meta name="keywords" content="线代总结, Kaileby和他的朋友们">
     <meta name="description" content="简简单单">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Kaileby和他的朋友们</title>
+    <title>线代总结 | Kaileby和他的朋友们</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">线代总结</h1>
                 </div>
             </div>
         </div>
@@ -457,19 +457,446 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <center style="color:orange;font-style:bold;font-size:24px">线代</center>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<blockquote>
+<p><font style="color:green">绿色</font>: 表示了解概念，但用的还不熟</p>
+<p><font color="red">红色</font>：表示不会</p>
+<p><font style="color:pink">粉色</font>:或者记不清了，忘记了</p>
+</blockquote>
+<h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><blockquote>
+<p>行列式的基本性质：</p>
+<ul>
+<li>A 的转置的行列式等于 A 的行列式</li>
+<li>可将·某行/列的公因式提取出来</li>
+<li>行/列互换，行列式的值添负号</li>
+<li><font style="color:pink">行倍加，列倍加，行列式的值不变</font></li>
+<li><font style="color:pink">行列式两行成比例，行列式等于 0</font></li>
+<li><font style="color:pink">行列式可拆</font><ul>
+<li>如何拆？</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="行列式计算-具体的"><a href="#行列式计算-具体的" class="headerlink" title="行列式计算 - 具体的"></a>行列式计算 - 具体的</h4><ul>
+<li><p>行列式展开 (具体的)</p>
+</li>
+<li><p>不能展开？</p>
+<ul>
+<li><p>根据行列式性质化简</p>
+<ul>
+<li><p>化为上三角、下三角</p>
+</li>
+<li><p>化为拉普拉斯</p>
+<ul>
+<li><p>什么是拉普拉斯？ </p>
+<p>公式</p>
+</li>
+</ul>
+</li>
+<li><p>范德蒙</p>
+</li>
+<li><p>爪型</p>
+<ul>
+<li>化为上三角、或下三角<ul>
+<li>具体做法：Ri=Ri - n*R1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>三对角线</p>
+<ul>
+<li>3,4阶 用行列式性质化简 成三角</li>
+<li>n 阶 - 用 <font style="color:green">归纳法</font></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="行列式计算-抽象的"><a href="#行列式计算-抽象的" class="headerlink" title="行列式计算 - 抽象的"></a>行列式计算 - 抽象的</h4><blockquote>
+<p>联系其它知识点，结合已知条件</p>
+</blockquote>
+<ul>
+<li><p>与矩阵的联系：</p>
+<ul>
+<li>秩 小于 未知数个数(列向量个数/列数) → 行列式等于0</li>
+<li><font style="color:pink">与可逆矩阵的联系</font></li>
+<li><font style="color:pink">与伴随矩阵的联系</font></li>
+</ul>
+</li>
+<li><p>与向量的联系:</p>
+<ul>
+<li>向量与方程组是换两种研究角度，本质是一样的</li>
+<li>向量、方程组是分块矩阵的延伸</li>
+</ul>
+</li>
+<li><p>与双特的联系</p>
+<ul>
+<li>行列式等于特征值的累乘 - （这是由行列式的展开推导出来的）</li>
+<li>找到其相似矩阵 （一般该相似矩阵为对角矩阵），跟找特征值是一个道理</li>
+</ul>
+</li>
+</ul>
+<h4 id="行列式等于零的证明"><a href="#行列式等于零的证明" class="headerlink" title="行列式等于零的证明"></a>行列式等于零的证明</h4><blockquote>
+<p>联系其它知识点，结合已知条件</p>
+</blockquote>
+<ul>
+<li>与矩阵(方阵)的联系：<ul>
+<li>秩 小于 未知数个数(列向量个数/列数) → 行列式等于0</li>
+<li>行列式对应的矩阵不可逆 → 行列式等于0</li>
+</ul>
+</li>
+<li>与向量的联系:<ul>
+<li>向量与方程组是换两种研究角度，本质是一样的</li>
+<li>向量、方程组是分块矩阵的延伸</li>
+</ul>
+</li>
+<li>与方程组的联系：<ul>
+<li>Ax=0 有非零解 → 秩小于未知数个数 → 行列式等于0</li>
+</ul>
+</li>
+<li>与双特的联系<ul>
+<li>有行列式等于特征值的累乘 → 找出一个特征值为 0 </li>
+<li>找到其相似矩阵 （一般该相似矩阵为对角矩阵），跟找特征值是一个道理</li>
+</ul>
+</li>
+</ul>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><blockquote>
+<p>矩阵运算的基本性质</p>
+<ul>
+<li>结合律：ABCD= A BC D</li>
+<li>大部分矩阵不满足交换律，除 A 与 A-1 ；A 与 A* 外</li>
+</ul>
+</blockquote>
+<h4 id="矩阵乘法"><a href="#矩阵乘法" class="headerlink" title="矩阵乘法"></a>矩阵乘法</h4><ul>
+<li><p>A 的 N次方</p>
+<blockquote>
+<p>思想：未知的东西，将其与已知的东西联系起来求</p>
+</blockquote>
+<ul>
+<li>将 A 拼成 α * β的形式，这样好算</li>
+<li>找A的相似矩阵，相似矩阵的 N 次方特别好求</li>
+</ul>
+</li>
+</ul>
+<h4 id="求可逆矩阵"><a href="#求可逆矩阵" class="headerlink" title="求可逆矩阵"></a>求可逆矩阵</h4><blockquote>
+<p>A*A-1 = E</p>
+</blockquote>
+<ul>
+<li>具体的矩阵直接初等行变换</li>
+<li>抽象的矩阵：定义法</li>
+<li>若是分块矩阵，求可逆，用公式</li>
+<li>联系伴随矩阵求可逆</li>
+</ul>
+<h4 id="求伴随矩阵"><a href="#求伴随矩阵" class="headerlink" title="求伴随矩阵"></a>求伴随矩阵</h4><blockquote>
+<p>A * A*= |A| * E</p>
+</blockquote>
+<ul>
+<li>定义法</li>
+<li>联系可逆矩阵</li>
+</ul>
+<h5 id="关于伴随矩阵的秩的考察"><a href="#关于伴随矩阵的秩的考察" class="headerlink" title="关于伴随矩阵的秩的考察"></a>关于伴随矩阵的秩的考察</h5><ul>
+<li>R(A*)</li>
+</ul>
+<h4 id="初等矩阵的性质"><a href="#初等矩阵的性质" class="headerlink" title="初等矩阵的性质"></a>初等矩阵的性质</h4><ul>
+<li>初等矩阵求可逆<ul>
+<li>乘数 - 乘相反数</li>
+<li>换行 - 不变</li>
+<li>行倍某数加 - 行倍某数的倒数加</li>
+</ul>
+</li>
+</ul>
+<h4 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h4><blockquote>
+<p>A的转置 = A 的逆</p>
+</blockquote>
+<ul>
+<li><p>正交矩阵的性质的应用</p>
+<ul>
+<li><p>用在相似对角化求 Q矩阵中</p>
+<blockquote>
+<p>普通的矩阵求逆矩阵，通过行变换，或是已知条件给出的伴随矩阵求出，都挺麻烦的；</p>
+<p>而正交矩阵的逆矩阵特别好求；</p>
+<p>又 对于能相似对角化的矩阵来说，其 Q 的每个向量都是无关的；</p>
+<p>所以只需要把无关的矩阵化成正交矩阵 (正交化单位化即可)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>几何意义：向量垂直</p>
+</li>
+</ul>
+<h4 id="秩"><a href="#秩" class="headerlink" title="秩"></a>秩</h4><blockquote>
+<p>秩是连接 行列式 矩阵 向量 方程组 双特 的桥梁</p>
+<p>向量 方程组 算是从矩阵分出去的，属于分块矩阵的一支</p>
+<p>行列式 也是从方阵分出去的，也属于矩阵的一支</p>
+<p><font style="color:orange">题目往往是用 秩 的思想得出结论去论证一些问题 </font></p>
+</blockquote>
+<ul>
+<li><p>秩的性质</p>
+<ul>
+<li><p>A 可逆， AB=C 或 BA=C</p>
+<p>有 R(B)=R(C) </p>
+<blockquote>
+<p>原理：</p>
+<ul>
+<li>可逆矩阵是由若干初等矩阵组成的</li>
+<li>对矩阵做若干次初等变换（相当于乘单位矩阵），秩不变</li>
+</ul>
+</blockquote>
+</li>
+<li><p>A * B = 0 ; A 为 m*n , B 为 n * s</p>
+<p>R（A）+ R(B) &lt;= N</p>
+<blockquote>
+<p>原理：<font style="color:green">不知</font></p>
+</blockquote>
+<p>联系：   </p>
+<ul>
+<li>齐次方程有解</li>
+</ul>
+</li>
+<li><p>AB=C  ; A 为 m*n , B 为 n * s</p>
+<p>R(AB)=R(C)&lt;= min( R(A) , R(B) )</p>
+<blockquote>
+<p>原理：<font style="color:green">不知</font></p>
+</blockquote>
+</li>
+<li><p><font style="color:red">记错了：R(A) + R(B) &lt;= R(A+B)</font></p>
+<p>R(A+B) &lt;= R(A) + R(B) </p>
+</li>
+<li><p>R(A | b) &gt;= R(b)</p>
+<ul>
+<li>类似的 在行上增加也满足这个式子</li>
+</ul>
+</li>
+<li><p><font style="color:pink">R(AT A)=R(A)   </font></p>
+<blockquote>
+<p><font style="color:red">原理</font></p>
+<p>由 ATAx=0 与 Ax=0 有公共解证出；</p>
+<p>Ax=0 → ATA x=0 →R()</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="秩的联系"><a href="#秩的联系" class="headerlink" title="秩的联系"></a>秩的联系</h5><ul>
+<li><p>秩与行列式的联系</p>
+<ul>
+<li><p>秩的定义本就是 N 阶子式的行列式不等于 0，自然具有联系</p>
+<ul>
+<li>R(A)&lt; N → N阶子式等于0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>秩与矩阵的联系</p>
+<blockquote>
+<p>秩与行列式有联系</p>
+<p>行列式与可逆有联系</p>
+<p>→ 秩与 可逆矩阵有联系</p>
+</blockquote>
+<ul>
+<li>R(A)&lt; N → N阶子式等于0 → A 不可逆</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>秩与向量、方程组的联系</p>
+<blockquote>
+<p>向量与方程组是密不可分的</p>
+</blockquote>
+<ul>
+<li><p>秩与相关、无关的联系</p>
+<ul>
+<li>R(A) &lt; N →其次方程有非 0 解 → A 的列向量相关</li>
+<li>R(A) = N →其次方程只有 0 解 → A 的列向量无关</li>
+</ul>
+</li>
+<li><p>秩与线性表出的联系</p>
+<ul>
+<li><p>R(A|b) = R(A) = N → 非齐次方程有唯一解 → b 能被A的列向量线性表出→（A,b）线性相关→A无关→b能被 A唯一表出</p>
+</li>
+<li><p>R(A|b) = R(A) &lt; N → 非齐次方程有无穷解 → b 能被A的列向量线性表出→（A,b）线性相关→A中存在一个极大无关组能表出b</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><h4 id="相关、无关的证明"><a href="#相关、无关的证明" class="headerlink" title="相关、无关的证明"></a>相关、无关的证明</h4><ul>
+<li><p>反证法</p>
+<blockquote>
+<p> 反证法是所有证明题的通用法则</p>
+</blockquote>
+<ul>
+<li>假设 “不能” 为 “能”，推导出与已知条件的矛盾，即证明成功</li>
+</ul>
+</li>
+<li><p>定义法</p>
+<ul>
+<li>乘 某物，某物取决于是否能乘出 0</li>
+</ul>
+</li>
+<li><p>用秩的观点</p>
+<ul>
+<li>前面已经提到 秩与 相关无关的联系</li>
+</ul>
+</li>
+<li><p>凑 AB=0</p>
+<blockquote>
+<p>还是用秩的观点</p>
+</blockquote>
+</li>
+<li><p>与其次方程有无非 0解的联系</p>
+</li>
+</ul>
+<h4 id="相关无关的性质考察"><a href="#相关无关的性质考察" class="headerlink" title="相关无关的性质考察"></a>相关无关的性质考察</h4><ul>
+<li><p>低维无关 → 高维无关</p>
+<blockquote>
+<p>低维无关=R(A)=n,由 R(A)&lt;=min(m,n)得知，n&lt;m</p>
+<p>添加行。A变成 m+s * n的矩阵，s自然小于 m+s →R(A)=n,即高维无关</p>
+</blockquote>
+</li>
+<li><p>低列相关 → 高列相关</p>
+<blockquote>
+<p>低列相关= R(A)&lt;n,给A 添列，A变成了 m * n+s 的矩阵，R(A)自然小于n+s，所以高列相关</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="线性表出的证明"><a href="#线性表出的证明" class="headerlink" title="线性表出的证明"></a>线性表出的证明</h4><ul>
+<li>定义法</li>
+<li>用秩的观点 非齐次方程有解</li>
+</ul>
+<h4 id="向量组表出"><a href="#向量组表出" class="headerlink" title="向量组表出"></a>向量组表出</h4><ul>
+<li><p>向量组单向表出</p>
+<blockquote>
+<p>AB=C</p>
+</blockquote>
+<p>Ax=b1 Ax=b2 … Ax=bn 有解；即这 N 个方程有公共解</p>
+</li>
+<li><p>向量组双向表出，即等价</p>
+<blockquote>
+<p>与矩阵等价的区别练习</p>
+</blockquote>
+<p>矩阵等价与向量组等价本无联系。</p>
+<ul>
+<li><p>向量组等价可以看成是：</p>
+<p>A 等价 B ,可以看成是 A 右乘一个 m*n 的矩阵X  得到了B，不要求 m=n</p>
+<p>若恰巧 m=n，且此时 X 还可逆，则就说矩阵A等价矩阵B，这样的情况，也符合向量组等价的定义</p>
+</li>
+<li><p>矩阵等价</p>
+<p>是 A 左乘 或 右乘 一个可逆矩阵，得到 B,说 A B矩阵等价</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h3><h4 id="讨论方程组有无解的问题"><a href="#讨论方程组有无解的问题" class="headerlink" title="讨论方程组有无解的问题"></a>讨论方程组有无解的问题</h4><h4 id="方程组有公共解"><a href="#方程组有公共解" class="headerlink" title="方程组有公共解"></a>方程组有公共解</h4><ul>
+<li>得出两方程组的基解</li>
+<li>设存在 k1 … kn ，存在 m1 … mn，有 k1x1 + … knxn=m1y1+… mnyn</li>
+<li>解由基解组成的方程组，求出 k1… kn ,m1…mn</li>
+</ul>
+<h4 id="方程组有同解"><a href="#方程组有同解" class="headerlink" title="方程组有同解"></a>方程组有同解</h4><h3 id="特征值、特征向量"><a href="#特征值、特征向量" class="headerlink" title="特征值、特征向量"></a>特征值、特征向量</h3><h4 id="双特的计算-具体"><a href="#双特的计算-具体" class="headerlink" title="双特的计算 -具体"></a>双特的计算 -具体</h4><ul>
+<li>|x-A|=0，求出特征值  （考察了行列式）</li>
+<li>（x-A）c=0，求特征向量 （考察了解方程）</li>
+</ul>
+<h4 id="求双特-抽象"><a href="#求双特-抽象" class="headerlink" title="求双特 - 抽象"></a>求双特 - 抽象</h4><ul>
+<li><p>定义</p>
+</li>
+<li><p>找相似矩阵</p>
+<blockquote>
+<p>由已知推导未知</p>
+</blockquote>
+</li>
+<li><p><font style="color:pink">特征值公式</font></p>
+<blockquote>
+<p>思想：右已知推导未知</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>对于特殊的矩阵</strong></p>
+<ul>
+<li>秩为1的矩阵<ul>
+<li>一个特征值等于迹，其余特征值为 0</li>
+</ul>
+</li>
+</ul>
+<h4 id="判断矩阵相似"><a href="#判断矩阵相似" class="headerlink" title="判断矩阵相似"></a>判断矩阵相似</h4><ul>
+<li>矩阵相似的必要条件<ul>
+<li>行列式： 各自特征值的累积要相等</li>
+<li>矩阵：R(A)=R(B)</li>
+<li><font style="color:pink">双特：特征值相等</font></li>
+<li>迹相等</li>
+</ul>
+</li>
+<li>当前 4 个都满足的话，就通过 相似的传递性来判断</li>
+</ul>
+<h4 id="求矩阵相似对角化"><a href="#求矩阵相似对角化" class="headerlink" title="求矩阵相似对角化"></a>求矩阵相似对角化</h4><ul>
+<li><p>可相似对角化的充要</p>
+<ul>
+<li>有 n 个无关的特征向量</li>
+</ul>
+</li>
+<li><p>可相似对角化的充分</p>
+<ul>
+<li><p>有 n 个不等的特征值</p>
+<p>or</p>
+</li>
+<li><p>n 重跟有 n 个无关的特征向量</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="求使得矩阵相似对角化的矩阵-Q"><a href="#求使得矩阵相似对角化的矩阵-Q" class="headerlink" title="求使得矩阵相似对角化的矩阵 Q"></a>求使得矩阵相似对角化的矩阵 Q</h5><blockquote>
+<p>最好求可逆矩阵的矩阵是 正交矩阵</p>
+<p>正交矩阵的每个列向量都是无关的，但 无关不一定正交</p>
+<p>无关矩阵 化为 正交矩阵 （即正交化 单位化）</p>
+</blockquote>
+<h3 id="二次型"><a href="#二次型" class="headerlink" title="二次型"></a>二次型</h3><h4 id="二次型化为标准型"><a href="#二次型化为标准型" class="headerlink" title="二次型化为标准型"></a>二次型化为标准型</h4><blockquote>
+<p>二次型对应的矩阵是个 实对称矩阵</p>
+<p>标准型对应的矩阵是个 对角矩阵</p>
+<ul>
+<li>由 实对称矩阵必可 化为对角矩阵</li>
+</ul>
+<p>→ 二次型 必可化为 标准型</p>
+</blockquote>
+<p>所以 二次型化标准型就是，在求矩阵对角化</p>
+<h4 id="判断合同"><a href="#判断合同" class="headerlink" title="判断合同"></a>判断合同</h4><ul>
+<li><p>合同的充要</p>
+<ul>
+<li>两矩阵正、负惯性系数相等，合同</li>
+<li>QT A Q=B,Q 可逆，合同</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>合同、相似的区别</p>
+<blockquote>
+<p>相似比合同要求更严，相似不仅要求正负惯性指数相等，更要求特征值相等</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="正定矩阵的判定"><a href="#正定矩阵的判定" class="headerlink" title="正定矩阵的判定"></a>正定矩阵的判定</h4><blockquote>
+<ul>
+<li>定义： xT A x &gt;0</li>
+<li>正定矩阵必定对称</li>
+</ul>
+</blockquote>
+<ul>
+<li>正定矩阵的充要<ul>
+<li>N 阶顺序主子式都大于0</li>
+<li>xT A x &gt;0</li>
+</ul>
+</li>
+<li>正定矩阵的充分<ul>
+<li>N 阶顺序主子式都大于0 → 行列式大于 0</li>
+<li>aii 都大于0</li>
+<li>特征值都大于0 →正惯性指数等于n</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -495,7 +922,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/27/hello-world/">http://yoursite.com/2020/03/27/hello-world/</a>
+                    <a href="http://yoursite.com/2020/03/27/%E7%BA%BF%E4%BB%A3%E6%80%BB%E7%BB%93/">http://yoursite.com/2020/03/27/%E7%BA%BF%E4%BB%A3%E6%80%BB%E7%BB%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -701,7 +1128,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-03-27T22-32-31',
+        id: '2020-03-27T20-22-22',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -723,10 +1150,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2020/03/27/hello-world/">
                     <div class="card-image">
@@ -744,9 +1170,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -755,7 +1181,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -766,32 +1191,22 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/27/%E7%BA%BF%E4%BB%A3%E6%80%BB%E7%BB%93/">
+                <a href="/2020/03/27/%E5%86%99%E6%96%87%E7%AB%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="线代总结">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="写文章">
                         
-                        <span class="card-title">线代总结</span>
+                        <span class="card-title">写文章</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            线代
+                            英语小作文属应用文，写     道歉信      感谢信      投诉信(建议信)    求职信(申请信)        邀请信(介绍信)；要求：守规矩，按格式来
 
-
-绿色: 表示了解概念，但用的还不熟
-红色：表示不会
-粉色:或者记不清了，忘记了
-
-行列式
-行列式的基本性质：
-
-A 的转置的行列式等于 A 的行列式
-可将·某行/列的公因式提取出来
-行/列互换，行列式的值添负号
-行倍加，列倍加，行
+已考类型：
+辞职信1次， 询问信1次， 建议信4次、 道歉信1次、 告示
                         
                     </div>
                     <div class="publish-info">

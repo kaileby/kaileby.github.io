@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Kaileby和他的朋友们">
+    <meta name="keywords" content="1002 写出这个数, Kaileby和他的朋友们">
     <meta name="description" content="简简单单">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Kaileby和他的朋友们</title>
+    <title>1002 写出这个数 | Kaileby和他的朋友们</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">1002 写出这个数</h1>
                 </div>
             </div>
         </div>
@@ -457,19 +457,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <h4 id="1002-写出这个数"><a href="#1002-写出这个数" class="headerlink" title="1002 写出这个数"></a>1002 写出这个数</h4><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>![](E:\Rec-Note\2 技术\2 算法\PAT\1002\1002 写出这个数.png)</p>
+<h4 id="思路-amp-amp-遇到的错误"><a href="#思路-amp-amp-遇到的错误" class="headerlink" title="思路&amp;&amp;遇到的错误"></a>思路&amp;&amp;遇到的错误</h4><p><strong>步骤</strong></p>
+<ul>
+<li><p>累加输入的数字的每一位的值Sum</p>
+<ul>
+<li><p>起初，看到 10的100次方，想的是找一个足够大的数据类型来存放10的100次方这样的数，由于对类似4个字节的最大值的位数估算存在问题，所以卡了壳，一直没想出来…</p>
+<ul>
+<li><p>参考 网友的答案，才反应过来原来，可以将输入的数字当作字符来处理，然后把字符转换为数字~很巧</p>
+<ul>
+<li>于是用 C++ 的 string 类型来承接输入，<font style="color:red">对于 是用 cin 还是 scanf 进行字符串接收有些模糊</font></li>
+</ul>
+<blockquote>
+<ul>
+<li><p>scanf 接收 string</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> a;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	正确的写法</span></span><br><span class="line"><span class="comment">	a.resize(100); //需要预先分配空间</span></span><br><span class="line"><span class="comment">	scanf("%s", &amp;a[0]);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>,a.c_str());</span><br><span class="line">	<span class="built_in">puts</span>(a.c_str());</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 cin 接收字符串</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">string</span> s1;</span><br><span class="line">&gt;<span class="built_in">cin</span> &gt;&gt; s1;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>[更多关于 cin printf 的用法](E:\Rec-Note\2 技术\2 算法\PAT\1002\cin printf更深的用法.md)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>将 Sum 从最高位输出</p>
+<p>得到 Sum 的值后，采用取整求余数的方法依次能得到 个位，十位，百位 …,如果不做任何处理输出的顺序自然也是 个位、十位 …,与题目的要求不符，题目要求的输出顺序类似于：<font style="color:red">后进先出</font></p>
+<ul>
+<li>后进先出 → 栈</li>
+<li>栈 → 递归 </li>
+</ul>
+</li>
+</ul>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><h5 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> s[<span class="number">10</span>] = &#123;<span class="string">"ling"</span>, <span class="string">"yi"</span>, <span class="string">"er"</span>, <span class="string">"san"</span>, <span class="string">"si"</span>, <span class="string">"wu"</span>, <span class="string">"liu"</span>, <span class="string">"qi"</span>, <span class="string">"ba"</span>, <span class="string">"jiu"</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">acc</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> temp)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> re=n%<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	n=n/<span class="number">10</span>;</span><br><span class="line">	acc(n,temp); </span><br><span class="line">	<span class="keyword">if</span>(n*<span class="number">10</span>==temp)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;s[re];</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;s[re]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">string</span> s1;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; s1;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">int</span> i=<span class="number">0</span>; i &lt; s1.<span class="built_in">size</span>(); i++) count += s1[i] - <span class="string">'0'</span>;</span><br><span class="line">	<span class="comment">// printf("----------------- %d",count);</span></span><br><span class="line">	acc(count,count);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>格式错误</p>
+</blockquote>
+<p><strong>改正</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">string</span> s[<span class="number">10</span>] = &#123;<span class="string">"ling"</span>, <span class="string">"yi"</span>, <span class="string">"er"</span>, <span class="string">"san"</span>, <span class="string">"si"</span>, <span class="string">"wu"</span>, <span class="string">"liu"</span>, <span class="string">"qi"</span>, <span class="string">"ba"</span>, <span class="string">"jiu"</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">acc</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> temp)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> re=n%<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">	n=n/<span class="number">10</span>;</span><br><span class="line">	acc(n,temp); </span><br><span class="line">	<span class="keyword">if</span>(n*<span class="number">10</span>+re==temp)&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;s[re];</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;s[re]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">string</span> s1;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; s1;</span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">int</span> i=<span class="number">0</span>; i &lt; s1.<span class="built_in">size</span>(); i++) count += s1[i] - <span class="string">'0'</span>;</span><br><span class="line">	</span><br><span class="line">	acc(count,count);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+<h5 id="栈-循环"><a href="#栈-循环" class="headerlink" title="栈 + 循环"></a>栈 + 循环</h5><blockquote>
+<p>正确</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s2;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>, t;</span><br><span class="line">    <span class="built_in">string</span> a[<span class="number">10</span>] = &#123;<span class="string">"ling"</span>, <span class="string">"yi"</span>, <span class="string">"er"</span>, <span class="string">"san"</span>, <span class="string">"si"</span>, <span class="string">"wu"</span>, <span class="string">"liu"</span>, <span class="string">"qi"</span>, <span class="string">"ba"</span>, <span class="string">"jiu"</span>&#125;;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s1;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; s1.<span class="built_in">size</span>(); i++) sum += s1[i] - <span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">while</span>(sum) &#123;</span><br><span class="line">        s2.push(sum % <span class="number">10</span>);</span><br><span class="line">        sum /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    t = s2.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">while</span>(--t) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; a[s2.top()] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">        s2.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a[s2.top()];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             </div>
             <hr/>
@@ -495,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/03/27/hello-world/">http://yoursite.com/2020/03/27/hello-world/</a>
+                    <a href="http://yoursite.com/2020/03/27/1002%20%E5%86%99%E5%87%BA%E8%BF%99%E4%B8%AA%E6%95%B0/">http://yoursite.com/2020/03/27/1002%20%E5%86%99%E5%87%BA%E8%BF%99%E4%B8%AA%E6%95%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -701,7 +739,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-03-27T22-32-31',
+        id: '2020-03-27T20-22-22',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -723,30 +761,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/27/hello-world/">
+                <a href="/2020/03/27/1003%20%E6%88%91%E8%A6%81%E9%80%9A%E8%BF%87/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="1003 我要通过">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">1003 我要通过</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            我要通过这道题问题题目中正确的字符串格式：
+
+xPATx,x为空字符串或者为全为 ’A‘ 的字符串
+若xPzTy是正确的 ,x,y, z为空字符串或全为 ’A‘ 的字符串，则xPzATyx 也是正确的
+
+思路
+xP(n-1)ATy 为正确的
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -755,7 +798,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -763,35 +805,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/27/%E7%BA%BF%E4%BB%A3%E6%80%BB%E7%BB%93/">
+                <a href="/2020/03/27/1002%20%E5%86%99%E5%87%BA%E8%BF%99%E4%B8%AA%E6%95%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="线代总结">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="1002 写出这个数">
                         
-                        <span class="card-title">线代总结</span>
+                        <span class="card-title">1002 写出这个数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            线代
+                            1002 写出这个数描述![](E:\Rec-Note\2 技术\2 算法\PAT\1002\1002 写出这个数.png)
+思路&amp;&amp;遇到的错误步骤
 
+累加输入的数字的每一位的值Sum
 
-绿色: 表示了解概念，但用的还不熟
-红色：表示不会
-粉色:或者记不清了，忘记了
-
-行列式
-行列式的基本性质：
-
-A 的转置的行列式等于 A 的行列式
-可将·某行/列的公因式提取出来
-行/列互换，行列式的值添负号
-行倍加，列倍加，行
+起初，看到 10的100次方，想的是
                         
                     </div>
                     <div class="publish-info">
@@ -806,6 +840,7 @@ A 的转置的行列式等于 A 的行列式
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
