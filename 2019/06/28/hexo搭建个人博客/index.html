@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="hexo个人博客搭建环境准备 Node.js node -v  npm-v  测试 Node.js 是否安装成功    cnpm npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org 安装好了就可以使用cnpm来替代npm进行js依赖的下载了    hexo cnpm install -g hexo-cli 使用 cnpm 安">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建博客">
+<meta property="og:url" content="http://yoursite.com/2019/06/28/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Kaileby和他的朋友们">
+<meta property="og:description" content="hexo个人博客搭建环境准备 Node.js node -v  npm-v  测试 Node.js 是否安装成功    cnpm npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org 安装好了就可以使用cnpm来替代npm进行js依赖的下载了    hexo cnpm install -g hexo-cli 使用 cnpm 安">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-28T14:36:00.000Z">
+<meta property="article:modified_time" content="2020-06-07T09:41:14.784Z">
+<meta property="article:author" content="Kai1eby">
+<meta property="article:tag" content="博客的搭建">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2019/06/28/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>搭建博客 | Kaileby和他的朋友们</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Kaileby和他的朋友们</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">不灭之握</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kai1eby">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kaileby和他的朋友们">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搭建博客
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-06-28 22:36:00" itemprop="dateCreated datePublished" datetime="2019-06-28T22:36:00+08:00">2019-06-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-07 17:41:14" itemprop="dateModified" datetime="2020-06-07T17:41:14+08:00">2020-06-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index"><span itemprop="name">博客相关</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="hexo个人博客搭建"><a href="#hexo个人博客搭建" class="headerlink" title="hexo个人博客搭建"></a>hexo个人博客搭建</h2><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
+<li><p>Node.js</p>
+<p><code>node -v</code>  <code>npm-v</code> </p>
+<p>测试 Node.js 是否安装成功</p>
+</li>
+</ul>
+<ul>
+<li><p>cnpm</p>
+<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<p>安装好了就可以使用cnpm来替代npm进行js依赖的下载了</p>
+</li>
+</ul>
+<ul>
+<li><p>hexo</p>
+<p><code>cnpm install -g hexo-cli</code></p>
+<p>使用 <code>cnpm</code> 安装 <code>hexo</code> 框架；hexo -v 验证 hexo 是否安装成功</p>
+</li>
+</ul>
+<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><ul>
+<li><p>创建文件夹作为博客的仓库</p>
+<p> 在命令行窗口中切换到新建好的<code>博客仓库的当前目录</code>下；</p>
+</li>
+</ul>
+<ul>
+<li><p>初始化</p>
+<p><code>hexo init</code></p>
+<p>执行该命令后，会在 博客仓库 下，生成一系列文件 ，使用<code>dir /a *</code>可在 cmd 窗口中查看所有生成的文件</p>
+</li>
+</ul>
+<ul>
+<li><p>启动博客</p>
+<p><code>hexo s</code></p>
+<p>之后，命令窗口会提示在  <code>http://localhost:4000</code>查看本地的博客，至此个人博客就已经搭建成功了。</p>
+<p>在发布、部署到<code>github</code>之前，可以在本地进行预览，<code>ps：此时还不能再网站中查看到内容</code>。</p>
+<ul>
+<li>可以试着在 博客仓库下的 source 文件夹下新建一个 md 文件，并在浏览器预览。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>导入资源</p>
+<p><code>D:\Project\myBlog\source\_posts</code></p>
+<p>myBlog 是个人仓库名，资源都是放在source\ _posts目录下的；在搭建环境之后，就可以往里面放置自己的<code>md</code> 文档</p>
+</li>
+</ul>
+<ul>
+<li><p>将新增加的内容与博客建立关联</p>
+<p><code>hexo g</code> 相当于刷新的作用，用于同步 <code>myBlog</code> 中的任何改动，譬如：博客内容的删减、博客样式的变动等。</p>
+<p>然后 <code>hexo s</code> 重启一下，在浏览器中，输入 <code>http://localhost:4000</code> 预览效果</p>
+</li>
+</ul>
+<ul>
+<li><p>部署到 GitHub</p>
+<ul>
+<li><p>登录 GitHub, 新建一个 Repository</p>
+<p>PS: 仓库名必须是 xxx.github.io 形式,xxx是github的用户名，本人的仓库是 kaileby.github.io</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>回到命令行，在 博客仓库下安装 Git 插件</p>
+<p><code>cnpm install --save hexo-deployer-git</code></p>
+<p>利用 Git 工具，将博客仓库上传到 Github</p>
+</li>
+</ul>
+<ul>
+<li><p>设置 config.yml 文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/kaileby/kaileby.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>在文件末尾，大概 80 行的样子，进行上述的修改设置；</p>
+<p>PS：注意 type: 之后空格再写 git，直接写会报错….</p>
+</li>
+</ul>
+<ul>
+<li><p>部署到远端</p>
+<p>hexo d</p>
+<p>刷新 Github 中新建的那个 Reposity，可以看到多出来许多文件，接下来输入：<code>https://kaileby.github.io/</code> 即可访问到部署在GitHub上的博客</p>
+</li>
+</ul>
+<h2 id="给-Hexo-换样式"><a href="#给-Hexo-换样式" class="headerlink" title="给 Hexo 换样式"></a>给 Hexo 换样式</h2><ul>
+<li><p>下载 Theme</p>
+<blockquote>
+<p><strong>tips:</strong>切换到<code>D:\Project\myBlog\</code>，再执行下面的命令</p>
+</blockquote>
+<p><code>git clone https://github.com/litten/hexo-theme-yilia themes/yilla</code></p>
+<p>将下载的主题 clone 到 themes下的 yilia 文件夹下</p>
+</li>
+</ul>
+<ul>
+<li><p>修改 config.yml 文件</p>
+<p>默认 <code>theme: landscape</code>,将 landscape 替换成 yalla ;</p>
+<p>接着，使用 hexo clean , hexo s 即可看到效果</p>
+</li>
+</ul>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul>
+<li><p>安装 Node.js 没有 npm</p>
+<p>卸载 Node.js 以及 npm在 Appdata下创建的两个文件夹，重启，再重装一次解决了…有点莫名其妙！</p>
+</li>
+</ul>
+<h3 id="发布资源时遇到的问题"><a href="#发布资源时遇到的问题" class="headerlink" title="发布资源时遇到的问题"></a>发布资源时遇到的问题</h3><ul>
+<li><p>发布资源</p>
+<ul>
+<li>进入 <code>cmd</code> ，以 <code>D:\Project\myBlog</code> 为当前目录</li>
+<li>将新的博客内容放置在 <code>source\ _posts</code> 目录下，<code>hexo  g</code>同步到博客的最新状态；</li>
+<li><code>hexo d</code>，将博客的新状态部署到<code>github</code>，等几秒，即可在网站中见到更新的的内容</li>
+</ul>
+</li>
+<li><p>文章中存在嵌套引用</p>
+<ul>
+<li><p>在 <code>Typro</code> 中时完全支持多层嵌套的，但对于 <code>hexo</code>,它只接受一层引用。</p>
+</li>
+<li><p>具体表现：<code>hexo g</code> 时报错</p>
+<p><code>ValidationError: source is required!</code></p>
+</li>
+<li><p>解决方法：将文章中的引用全部改成一层</p>
+</li>
+</ul>
+</li>
+<li><p>内嵌的 HTML 语句也会报<code>ValidationError: source is required!</code>错</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/" rel="tag"># 博客的搭建</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/06/28/hexo%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" rel="prev" title="hexo 主题配置">
+      <i class="fa fa-chevron-left"></i> hexo 主题配置
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo个人博客搭建"><span class="nav-number">1.</span> <span class="nav-text">hexo个人博客搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始搭建"><span class="nav-number">3.</span> <span class="nav-text">开始搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给-Hexo-换样式"><span class="nav-number">4.</span> <span class="nav-text">给 Hexo 换样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#发布资源时遇到的问题"><span class="nav-number">5.1.</span> <span class="nav-text">发布资源时遇到的问题</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Kai1eby</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kai1eby</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

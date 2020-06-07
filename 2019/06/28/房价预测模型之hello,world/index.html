@@ -20,28 +20,34 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kaileby和他的朋友们">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="房价预测模型     Step 1:定位问题  首先，问题已知 Label: 所以是监督学习  问题是需要根据以往的房价，预测出未来的房价，预测的结果是一个值，所以是回归问题；      Step 2： 解决方案 基本流程  收集样本 数据清洗、整理、规格化 将数据分为训练数据、测试数据   搭建模型 训练 配置模型 前向计算 损失函数优化 后向传播，更新参数        代码实现   1234">
+<meta property="og:type" content="article">
+<meta property="og:title" content="房价预测模型之Hello World">
+<meta property="og:url" content="http://yoursite.com/2019/06/28/%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E4%B9%8Bhello,world/index.html">
 <meta property="og:site_name" content="Kaileby和他的朋友们">
+<meta property="og:description" content="房价预测模型     Step 1:定位问题  首先，问题已知 Label: 所以是监督学习  问题是需要根据以往的房价，预测出未来的房价，预测的结果是一个值，所以是回归问题；      Step 2： 解决方案 基本流程  收集样本 数据清洗、整理、规格化 将数据分为训练数据、测试数据   搭建模型 训练 配置模型 前向计算 损失函数优化 后向传播，更新参数        代码实现   1234">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-28T14:36:00.000Z">
+<meta property="article:modified_time" content="2020-06-07T09:48:15.508Z">
 <meta property="article:author" content="Kai1eby">
+<meta property="article:tag" content="线性模型">
+<meta property="article:tag" content="hello，world">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2019/06/28/%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E4%B9%8Bhello,world/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Kaileby和他的朋友们</title>
+  <title>房价预测模型之Hello World | Kaileby和他的朋友们</title>
   
 
 
@@ -146,359 +152,11 @@
         <div class="content-wrap">
           
 
-          <div class="content index">
+          <div class="content post">
             
 
   <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Kai1eby">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kaileby和他的朋友们">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/06/28/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">搭建博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-06-28 22:36:00" itemprop="dateCreated datePublished" datetime="2019-06-28T22:36:00+08:00">2019-06-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-07 17:41:14" itemprop="dateModified" datetime="2020-06-07T17:41:14+08:00">2020-06-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index"><span itemprop="name">博客相关</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
-          <h2 id="hexo个人博客搭建"><a href="#hexo个人博客搭建" class="headerlink" title="hexo个人博客搭建"></a>hexo个人博客搭建</h2><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li><p>Node.js</p>
-<p><code>node -v</code>  <code>npm-v</code> </p>
-<p>测试 Node.js 是否安装成功</p>
-</li>
-</ul>
-<ul>
-<li><p>cnpm</p>
-<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
-<p>安装好了就可以使用cnpm来替代npm进行js依赖的下载了</p>
-</li>
-</ul>
-<ul>
-<li><p>hexo</p>
-<p><code>cnpm install -g hexo-cli</code></p>
-<p>使用 <code>cnpm</code> 安装 <code>hexo</code> 框架；hexo -v 验证 hexo 是否安装成功</p>
-</li>
-</ul>
-<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><ul>
-<li><p>创建文件夹作为博客的仓库</p>
-<p> 在命令行窗口中切换到新建好的<code>博客仓库的当前目录</code>下；</p>
-</li>
-</ul>
-<ul>
-<li><p>初始化</p>
-<p><code>hexo init</code></p>
-<p>执行该命令后，会在 博客仓库 下，生成一系列文件 ，使用<code>dir /a *</code>可在 cmd 窗口中查看所有生成的文件</p>
-</li>
-</ul>
-<ul>
-<li><p>启动博客</p>
-<p><code>hexo s</code></p>
-<p>之后，命令窗口会提示在  <code>http://localhost:4000</code>查看本地的博客，至此个人博客就已经搭建成功了。</p>
-<p>在发布、部署到<code>github</code>之前，可以在本地进行预览，<code>ps：此时还不能再网站中查看到内容</code>。</p>
-<ul>
-<li>可以试着在 博客仓库下的 source 文件夹下新建一个 md 文件，并在浏览器预览。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>导入资源</p>
-<p><code>D:\Project\myBlog\source\_posts</code></p>
-<p>myBlog 是个人仓库名，资源都是放在source\ _posts目录下的；在搭建环境之后，就可以往里面放置自己的<code>md</code> 文档</p>
-</li>
-</ul>
-<ul>
-<li><p>将新增加的内容与博客建立关联</p>
-<p><code>hexo g</code> 相当于刷新的作用，用于同步 <code>myBlog</code> 中的任何改动，譬如：博客内容的删减、博客样式的变动等。</p>
-<p>然后 <code>hexo s</code> 重启一下，在浏览器中，输入 <code>http://localhost:4000</code> 预览效果</p>
-</li>
-</ul>
-<ul>
-<li><p>部署到 GitHub</p>
-<ul>
-<li><p>登录 GitHub, 新建一个 Repository</p>
-<p>PS: 仓库名必须是 xxx.github.io 形式,xxx是github的用户名，本人的仓库是 kaileby.github.io</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>回到命令行，在 博客仓库下安装 Git 插件</p>
-<p><code>cnpm install --save hexo-deployer-git</code></p>
-<p>利用 Git 工具，将博客仓库上传到 Github</p>
-</li>
-</ul>
-<ul>
-<li><p>设置 config.yml 文件</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/kaileby/kaileby.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>在文件末尾，大概 80 行的样子，进行上述的修改设置；</p>
-<p>PS：注意 type: 之后空格再写 git，直接写会报错….</p>
-</li>
-</ul>
-<ul>
-<li><p>部署到远端</p>
-<p>hexo d</p>
-<p>刷新 Github 中新建的那个 Reposity，可以看到多出来许多文件，接下来输入：<code>https://kaileby.github.io/</code> 即可访问到部署在GitHub上的博客</p>
-</li>
-</ul>
-<h2 id="给-Hexo-换样式"><a href="#给-Hexo-换样式" class="headerlink" title="给 Hexo 换样式"></a>给 Hexo 换样式</h2><ul>
-<li><p>下载 Theme</p>
-<blockquote>
-<p><strong>tips:</strong>切换到<code>D:\Project\myBlog\</code>，再执行下面的命令</p>
-</blockquote>
-<p><code>git clone https://github.com/litten/hexo-theme-yilia themes/yilla</code></p>
-<p>将下载的主题 clone 到 themes下的 yilia 文件夹下</p>
-</li>
-</ul>
-<ul>
-<li><p>修改 config.yml 文件</p>
-<p>默认 <code>theme: landscape</code>,将 landscape 替换成 yalla ;</p>
-<p>接着，使用 hexo clean , hexo s 即可看到效果</p>
-</li>
-</ul>
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul>
-<li><p>安装 Node.js 没有 npm</p>
-<p>卸载 Node.js 以及 npm在 Appdata下创建的两个文件夹，重启，再重装一次解决了…有点莫名其妙！</p>
-</li>
-</ul>
-<h3 id="发布资源时遇到的问题"><a href="#发布资源时遇到的问题" class="headerlink" title="发布资源时遇到的问题"></a>发布资源时遇到的问题</h3><ul>
-<li><p>发布资源</p>
-<ul>
-<li>进入 <code>cmd</code> ，以 <code>D:\Project\myBlog</code> 为当前目录</li>
-<li>将新的博客内容放置在 <code>source\ _posts</code> 目录下，<code>hexo  g</code>同步到博客的最新状态；</li>
-<li><code>hexo d</code>，将博客的新状态部署到<code>github</code>，等几秒，即可在网站中见到更新的的内容</li>
-</ul>
-</li>
-<li><p>文章中存在嵌套引用</p>
-<ul>
-<li><p>在 <code>Typro</code> 中时完全支持多层嵌套的，但对于 <code>hexo</code>,它只接受一层引用。</p>
-</li>
-<li><p>具体表现：<code>hexo g</code> 时报错</p>
-<p><code>ValidationError: source is required!</code></p>
-</li>
-<li><p>解决方法：将文章中的引用全部改成一层</p>
-</li>
-</ul>
-</li>
-<li><p>内嵌的 HTML 语句也会报<code>ValidationError: source is required!</code>错</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/hexo%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Kai1eby">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kaileby和他的朋友们">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/06/28/hexo%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">hexo 主题配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-06-28 22:36:00" itemprop="dateCreated datePublished" datetime="2019-06-28T22:36:00+08:00">2019-06-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-07 17:45:47" itemprop="dateModified" datetime="2020-06-07T17:45:47+08:00">2020-06-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index"><span itemprop="name">博客相关</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>搭建好 <code>hexo</code> 博客之后，界面是相当简陋的，接着就要自定义想要的样式，装修毛胚房。</p>
-<h5 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件 _config.yml"></a>配置文件 <code>_config.yml</code></h5><ul>
-<li><p>博客站点下的<code>_config.yml</code></p>
-<p>这个配置文件位于本人的 <code>D:\Project\Blogs</code> 目录下诸如，该配置文件可用于设置博客的总体的搭配，使用何种样式、部署到哪里、以及其它后续需要加入的自定义模块等，如下所示的几个配置选项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"># 部署到github服务器上</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;kaileby&#x2F;kaileby.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br><span class="line"># 指定博客使用的主题为 next</span><br><span class="line">theme: next</span><br><span class="line"></span><br><span class="line"># 给博客添加一个 宠物小精灵</span><br><span class="line">live2d: </span><br><span class="line">    enable: true </span><br><span class="line">    scriptFrom: local </span><br><span class="line">    pluginRootPath: live2dw&#x2F;</span><br><span class="line">    pluginJsPath: lib&#x2F; </span><br><span class="line">    pluginModelPath: assets&#x2F; </span><br><span class="line">    tagMode: false </span><br><span class="line">    log: false </span><br><span class="line">    model: </span><br><span class="line">        use: live2d-widget-model-wanko</span><br><span class="line">    display: </span><br><span class="line">        position: left </span><br><span class="line">        width: 200 </span><br><span class="line">        height: 400 </span><br><span class="line">    mobile: </span><br><span class="line">        show: true </span><br><span class="line">    react: </span><br><span class="line">        opacity: 0.7</span><br><span class="line">        </span><br><span class="line"># Site 配置博客的名称、子名称、博客的介绍、作者等</span><br><span class="line">title: Kaileby和他的朋友们</span><br><span class="line">subtitle: 不灭之握</span><br><span class="line">description: </span><br><span class="line">keywords:</span><br><span class="line">author: Kai1eby</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>设置 RSS 订阅</p>
-<blockquote>
-<p>我们常常会有订阅别人文章的需求，有更新的时候希望能有提醒的功能，RSS就是这样一个订阅的方式</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">## 找到找到Extensions在下面添加</span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &#39; &#39;</span><br></pre></td></tr></table></figure>
-
-<p><strong>tips：</strong> 还有第二步，打开 theme 下的<code>_config.yml</code>，找到 <code>rss：</code>，接着配置：<code>rss: /atom.xml</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>主题 <code>Theme</code>下的<code>_config.yml</code></p>
-<p>这里以 next 主题为例，该配置文件位于本人的<code>D:\Project\Blogs\themes\next</code> 目录下，该配置文件决定了博客的大部分样式，以下给出几个非常关键的配置选项:</p>
-<ul>
-<li><p><code>Schemes</code> 设置主题的风格</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini # 这里选中的是 scheme 风格</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>sidebar</code> 侧栏设置</p>
-<blockquote>
-<p>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span><br><span class="line">  position: left        &#x2F;&#x2F;靠左放置</span><br><span class="line">  #position: right      &#x2F;&#x2F;靠右放置</span><br><span class="line"></span><br><span class="line"># Sidebar Display - 侧栏显示时机（只对Muse | Mist两种风格有效）</span><br><span class="line">  #display: post        &#x2F;&#x2F;默认行为，在文章页面（拥有目录列表）时显示</span><br><span class="line">  display: always       &#x2F;&#x2F;在所有页面中都显示</span><br><span class="line">  #display: hide        &#x2F;&#x2F;在所有页面中都隐藏（可以手动展开）</span><br><span class="line">  #display: remove      &#x2F;&#x2F;完全移除</span><br><span class="line"></span><br><span class="line">  offset: 12            &#x2F;&#x2F;文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">  b2t: false            &#x2F;&#x2F;返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">  scrollpercent: true   &#x2F;&#x2F;返回顶部按钮的百分比</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>Sidebar Avatar</code> 博客头像设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  # Replace the default image and set the url here. </span><br><span class="line">  url: #&#x2F;images&#x2F;avatar.gif &#x2F;&#x2F;头像所在位置</span><br><span class="line">  # If true, the avatar will be dispalyed in circle.</span><br><span class="line">  rounded: false # 将头像以圆形显示</span><br><span class="line">  # If true, the avatar will be rotated with the cursor.</span><br><span class="line">  rotated: false #鼠标点上去会旋转的特效</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>设置 <code>RSS</code></p>
-<blockquote>
-<p>我们常常会有订阅别人文章的需求，有更新的时候希望能有提醒的功能，RSS就是这样一个订阅的方式</p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><p>Next 主题下的配置</p>
-<ul>
-<li><p>设置分类 <code>categories</code></p>
-<ul>
-<li><p><code>hexo new page categories</code></p>
-<p>当命令行接着出现<code>INFO  Created: HEXO_ROOT\source\categories\index.md</code>表示设置成功，可以看到<code>D:\Project\Blogs\source\</code>下 有了 <code>categories</code> 文件夹</p>
-</li>
-<li><p>修改 <code>D:\Project\Blogs\source\categories</code> 下的 <code>index.md</code> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2019-07-14 17:51:10</span><br><span class="line">type: &quot;categories&quot; # 添加此项</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>往后，博客中需要若干专题(每个专题就是一个分类)，只需要在文档的开头添加以下内容，以指明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World # 文章的标题</span><br><span class="line">date: 2019-06-28 22:36:00</span><br><span class="line">categories: 工具配置 # 该文章归属于 ”工具“ 专栏</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>设置分类 <code>tag</code></p>
-<ul>
-<li><p><code>hexo new page tags</code></p>
-<p>命令行接着出现<code>INFO  Created: HEXO_ROOT\source\categories\index.md</code>表示设置成功，可以看到<code>D:\Project\Blogs\source\</code>下 有了 <code>tags</code> 文件夹</p>
-</li>
-<li><p>修改 <code>index.md</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2019-07-14 18:19:31</span><br><span class="line">type: &quot;tags&quot; # 添加此项</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>往后，除了根据分类。还可以根据标签来找文章了(类似于印象笔记中的标签)，只需要在文章的开头添加如下关键字(紧接着分类的关键字添加)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2019-06-28 22:36:00</span><br><span class="line">categories: hexo</span><br><span class="line">tags:</span><br><span class="line">  - hexo # 为该文章添加 hexo 标签</span><br><span class="line">  - others # 为该文章添加 others 标签</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -514,10 +172,9 @@
       <meta itemprop="name" content="Kaileby和他的朋友们">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/06/28/%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B%E4%B9%8Bhello,world/" class="post-title-link" itemprop="url">房价预测模型之Hello World</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          房价预测模型之Hello World
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -556,7 +213,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <center style="color:red;font-size:22px;font-weight:bold">房价预测模型</center>
+        <center style="color:red;font-size:22px;font-weight:bold">房价预测模型</center>
 
 
 
@@ -652,24 +309,56 @@
 
 <p>使用 <code>matplot</code> 画出图像，可以清晰的看出 Loss 随着不断改良模型过程中不断减小，当 Loss 不再下降时，代表着训练完成的差不多了！至此，机器学习的 <code>hello-world</code> 程序就此完成！</p>
 
-      
     </div>
 
     
     
     
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/" rel="tag"># 线性模型</a>
+              <a href="/tags/hello%EF%BC%8Cworld/" rel="tag"># hello，world</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/28/hexo%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" rel="next" title="hexo 主题配置">
+      hexo 主题配置 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
 
   </div>
-
-  
-
 
 
           </div>
@@ -720,6 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#获取数据"><span class="nav-number">1.</span> <span class="nav-text">获取数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将数据中的特征与结果分开"><span class="nav-number">2.</span> <span class="nav-text">将数据中的特征与结果分开</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
