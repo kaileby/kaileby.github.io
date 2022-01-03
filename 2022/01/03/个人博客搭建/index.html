@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
@@ -46,7 +46,8 @@ VuePres">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.0.0"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -74,7 +75,7 @@ VuePres">
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -85,7 +86,7 @@ VuePres">
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -96,7 +97,7 @@ VuePres">
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -107,7 +108,7 @@ VuePres">
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -118,7 +119,7 @@ VuePres">
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
+      <span>关于</span>
     </a>
     
   </li>
@@ -129,7 +130,7 @@ VuePres">
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>Contact</span>
+      <span>留言板</span>
     </a>
     
   </li>
@@ -140,14 +141,14 @@ VuePres">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>Friends</span>
+      <span>友情链接</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -175,7 +176,7 @@ VuePres">
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -186,7 +187,7 @@ VuePres">
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -197,7 +198,7 @@ VuePres">
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -208,7 +209,7 @@ VuePres">
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -219,7 +220,7 @@ VuePres">
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
+			关于
 		</a>
           
         </li>
@@ -230,7 +231,7 @@ VuePres">
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -241,7 +242,7 @@ VuePres">
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			Friends
+			友情链接
 		</a>
           
         </li>
@@ -478,13 +479,18 @@ VuePres">
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2022-01-03
                 </div>
                 
 
                 
 
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.3k
+                </div>
                 
 
                 
@@ -523,8 +529,9 @@ VuePres">
 <p>基于Java实现的博客框架</p>
 </li>
 </ul>
-<h2 id="Hexo-初步"><a href="#Hexo-初步" class="headerlink" title="Hexo 初步"></a>Hexo 初步</h2><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><h4 id="环境需求"><a href="#环境需求" class="headerlink" title="环境需求"></a>环境需求</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Node.js</span><br><span class="line">Git</span><br></pre></td></tr></table></figure>
-
+<h2 id="Hexo-初步"><a href="#Hexo-初步" class="headerlink" title="Hexo 初步"></a>Hexo 初步</h2><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><h4 id="环境需求"><a href="#环境需求" class="headerlink" title="环境需求"></a>环境需求</h4><pre class=" language-txt"><code class="language-txt">Node.js
+Git
+</code></pre>
 <ul>
 <li><p>Node.js</p>
 <p>使用 <code>node -v</code>  <code>npm -v</code> 验证是否安装成功；</p>
@@ -571,13 +578,17 @@ VuePres">
 </li>
 <li><p>修改 配置文件 <code>_config.yml</code></p>
 <p><strong>注意</strong>：部署之前</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email “1667582502@qq.com”</span><br><span class="line"></span><br><span class="line">git config --global user.name “kailebee”</span><br></pre></td></tr></table></figure>
+<pre class=" language-xml"><code class="language-xml">git config --global user.email “1667582502@qq.com”
 
-
-
+git config --global user.name “kailebee”
+</code></pre>
 <p>将博客托管到 Github 平台：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 在 deploy 节点下</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/kailebee/kailebee.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-xml"><code class="language-xml"># 在 deploy 节点下
+deploy:
+  type: git
+  repo: https://github.com/kailebee/kailebee.github.io.git
+  branch: master
+</code></pre>
 <p><strong>验证：</strong> <code>https://kailebee.github.io/</code></p>
 </li>
 </ol>
@@ -589,20 +600,119 @@ VuePres">
 <p>主题配置文件：<code>scheme：Gemini</code></p>
 </li>
 <li><p>Next 主题一般配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">override：false #表示是否将主题置为默认样式</span><br><span class="line">cache:</span><br><span class="line">	enable:true #表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快</span><br><span class="line">menu: #设置博客各个页面的相对路径，默认根路径是blog/source</span><br><span class="line">  home: / || home</span><br><span class="line">  about: /about/ || user</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">  archives: /archives/ || archive</span><br><span class="line">  #schedule: /schedule/ || calendar #日历</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取</span><br><span class="line">  #commonweal: /404/ || heartbeat # 腾讯公益404</span><br><span class="line"></span><br><span class="line"># Enable/Disable menu icons / item badges.</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true # 是否显示各个页面的图标</span><br><span class="line">  badges: true # 是否显示分类/标签/归档页的内容量</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure></li>
+<pre class=" language-xml"><code class="language-xml">override：false #表示是否将主题置为默认样式
+cache:
+    enable:true #表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快
+menu: #设置博客各个页面的相对路径，默认根路径是blog/source
+  home: / || home
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar #日历
+  #sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取
+  #commonweal: /404/ || heartbeat # 腾讯公益404
+
+# Enable/Disable menu icons / item badges.
+menu_settings:
+  icons: true # 是否显示各个页面的图标
+  badges: true # 是否显示分类/标签/归档页的内容量
+# Schemes
+scheme: Gemini
+</code></pre>
+</li>
 <li><p>站点文件基本配置 <code>blog/_config.yml</code> </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">title: 见渊の博客</span><br><span class="line">subtitle: 记录生活中的点点滴滴</span><br><span class="line">description: 直到这一刻微笑着说话为止，我至少留下了一公升眼泪</span><br><span class="line">keywords:</span><br><span class="line">author: 黄飘</span><br><span class="line">language: zh-CN # 主题语言</span><br><span class="line">timezone: Asia/Shanghai #中国的时区，不要乱改城市</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &#x27;http://yoursite.com/child&#x27; and root as &#x27;/child/&#x27;</span><br><span class="line">url: https://huangpiao.tech #绑定域名</span><br><span class="line">root: /  #默认根路径，指向实际的source</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># Directory</span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render: README.md # 部署的时候不包含的文件</span><br><span class="line"></span><br><span class="line"># Writing</span><br><span class="line">new_post_name: :title.md # 默认的新博文名称</span><br><span class="line">default_layout: post # 默认布局</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0 #把博客名称改成小写/大写（1,2）</span><br><span class="line">render_drafts: false # 是否显示草稿</span><br><span class="line">post_asset_folder: false #是否启用资源文件夹（用来存放相对路径图片或文件）</span><br><span class="line">relative_link: false # 把链接改为与根目录的相对位址</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true #是否开启代码高亮</span><br><span class="line">  line_number: true #是否增加代码行号</span><br><span class="line">  auto_detect: true #自动判断代码语言</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"># Home page setting</span><br><span class="line"># path: Root path for your blogs index page. (default = &#x27;&#x27;)</span><br><span class="line"># per_page: Posts displayed per page. (0 = disable pagination)</span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line">index_generator: #首页博客分布</span><br><span class="line">  path: &#x27;&#x27; #博客的默认路径</span><br><span class="line">  per_page: 10 #每页博客数量上限</span><br><span class="line">  order_by: -date #博客排序</span><br><span class="line"></span><br><span class="line"># Date / Time format</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line">date_format: YYYY-MM-DD #博客日期格式</span><br><span class="line">time_format: HH:mm:ss #博客时间格式</span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 10 #同上</span><br><span class="line"></span><br><span class="line">#归档页的分页设置</span><br><span class="line">archive_generator: #归档页的配置</span><br><span class="line">  per_page: 30 #归档页每页博客数</span><br><span class="line">  yearly: true #按年归档</span><br><span class="line">  monthly: true #按月归档</span><br><span class="line">#标签页的分页设置</span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 20 #标签页每页博客数</span><br><span class="line">  </span><br><span class="line">theme: next6 #选择博客主题，名字为themes中选择的主题文件夹名称</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy: #博客部署</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    github: https://github.com/nightmaredimple/nightmaredimple.github.io.git</span><br><span class="line">    coding: https://git.coding.net/nightmaredimple/nightmaredimple.git</span><br><span class="line">  branch: master</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<pre class=" language-xml"><code class="language-xml">title: 见渊の博客
+subtitle: 记录生活中的点点滴滴
+description: 直到这一刻微笑着说话为止，我至少留下了一公升眼泪
+keywords:
+author: 黄飘
+language: zh-CN # 主题语言
+timezone: Asia/Shanghai #中国的时区，不要乱改城市
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://huangpiao.tech #绑定域名
+root: /  #默认根路径，指向实际的source
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render: README.md # 部署的时候不包含的文件
+
+# Writing
+new_post_name: :title.md # 默认的新博文名称
+default_layout: post # 默认布局
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0 #把博客名称改成小写/大写（1,2）
+render_drafts: false # 是否显示草稿
+post_asset_folder: false #是否启用资源文件夹（用来存放相对路径图片或文件）
+relative_link: false # 把链接改为与根目录的相对位址
+future: true
+highlight:
+  enable: true #是否开启代码高亮
+  line_number: true #是否增加代码行号
+  auto_detect: true #自动判断代码语言
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator: #首页博客分布
+  path: '' #博客的默认路径
+  per_page: 10 #每页博客数量上限
+  order_by: -date #博客排序
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD #博客日期格式
+time_format: HH:mm:ss #博客时间格式
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10 #同上
+
+#归档页的分页设置
+archive_generator: #归档页的配置
+  per_page: 30 #归档页每页博客数
+  yearly: true #按年归档
+  monthly: true #按月归档
+#标签页的分页设置
+tag_generator:
+  per_page: 20 #标签页每页博客数
+  
+theme: next6 #选择博客主题，名字为themes中选择的主题文件夹名称
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy: #博客部署
+  type: git
+  repo: 
+    github: https://github.com/nightmaredimple/nightmaredimple.github.io.git
+    coding: https://git.coding.net/nightmaredimple/nightmaredimple.git
+  branch: master
+</code></pre>
+</li>
 <li><p>添加博客自定义图标</p>
 <p>将制作好的<code>16*16.png</code> <code>32*32.png</code> 等放在 <code>blog/themes/next/sources/images</code> 目录下 ，并修改主题配置文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /images/16x16.png</span><br><span class="line">  medium: /images/32x32.png</span><br><span class="line">  apple_touch_icon: /images/128x128.png</span><br><span class="line">  safari_pinned_tab: /images/logo2.svg</span><br></pre></td></tr></table></figure></li>
-<li><p>鼠标点击特效 </p>
-<p><strong>红心</strong></p>
-<p><code>themes/next/source/js</code> 下添加 <code>clicklove.js</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params">e,t,a</span>)</span>&#123;<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>)</span>&#123;c(<span class="string">&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#x27;&#x27;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;</span>),o(),r()&#125;<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>)</span>&#123;<span class="keyword">for</span>(<span class="keyword">var</span> e=<span class="number">0</span>;e&lt;d.length;e++)d[e].alpha&lt;=<span class="number">0</span>?(t.body.removeChild(d[e].el),d.splice(e,<span class="number">1</span>)):(d[e].y--,d[e].scale+=<span class="number">.004</span>,d[e].alpha-=<span class="number">.013</span>,d[e].el.style.cssText=<span class="string">&quot;left:&quot;</span>+d[e].x+<span class="string">&quot;px;top:&quot;</span>+d[e].y+<span class="string">&quot;px;opacity:&quot;</span>+d[e].alpha+<span class="string">&quot;;transform:scale(&quot;</span>+d[e].scale+<span class="string">&quot;,&quot;</span>+d[e].scale+<span class="string">&quot;) rotate(45deg);background:&quot;</span>+d[e].color+<span class="string">&quot;;z-index:99999&quot;</span>);requestAnimationFrame(r)&#125;<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>)</span>&#123;<span class="keyword">var</span> t=<span class="string">&quot;function&quot;</span>==<span class="keyword">typeof</span> e.onclick&amp;&amp;e.onclick;e.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">&quot;div&quot;</span>);a.className=<span class="string">&quot;heart&quot;</span>,d.push(&#123;<span class="attr">el</span>:a,<span class="attr">x</span>:e.clientX-<span class="number">5</span>,<span class="attr">y</span>:e.clientY-<span class="number">5</span>,<span class="attr">scale</span>:<span class="number">1</span>,<span class="attr">alpha</span>:<span class="number">1</span>,<span class="attr">color</span>:s()&#125;),t.body.appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">var</span> a=t.createElement(<span class="string">&quot;style&quot;</span>);a.type=<span class="string">&quot;text/css&quot;</span>;<span class="keyword">try</span>&#123;a.appendChild(t.createTextNode(e))&#125;<span class="keyword">catch</span>(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">&quot;head&quot;</span>)[<span class="number">0</span>].appendChild(a)&#125;<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span><span class="string">&quot;rgb(&quot;</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">&quot;,&quot;</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">&quot;,&quot;</span>+~~(<span class="number">255</span>*<span class="built_in">Math</span>.random())+<span class="string">&quot;)&quot;</span>&#125;<span class="keyword">var</span> d=[];e.requestAnimationFrame=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="keyword">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;<span class="built_in">setTimeout</span>(e,<span class="number">1e3</span>/<span class="number">60</span>)&#125;&#125;(),n()&#125;(<span class="built_in">window</span>,<span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
-
-<p>在<code>\themes\next\layout\_layout.swig</code>文件末尾添加:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
-<li></li>
+<pre class=" language-xml"><code class="language-xml">favicon:
+  small: /images/16x16.png
+  medium: /images/32x32.png
+  apple_touch_icon: /images/128x128.png
+  safari_pinned_tab: /images/logo2.svg
+</code></pre>
+</li>
 </ul>
 
                 
@@ -616,7 +726,7 @@ VuePres">
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -626,7 +736,7 @@ VuePres">
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -636,13 +746,13 @@ VuePres">
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
+                    许可协议。转载请注明来源
                     <a href="/about" target="_blank">John Doe</a>
                     !
                 </span>
@@ -652,7 +762,7 @@ VuePres">
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -849,7 +959,7 @@ VuePres">
         
         <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
                 <a href="/2022/01/03/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
@@ -907,7 +1017,7 @@ VuePres">
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/01/03/hello-world/">
@@ -969,7 +1079,7 @@ VuePres">
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -1142,13 +1252,13 @@ VuePres">
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -1160,7 +1270,10 @@ VuePres">
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <!-- <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a> -->
+    <a href="https://github.com/kaileby" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
@@ -1201,8 +1314,8 @@ VuePres">
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>

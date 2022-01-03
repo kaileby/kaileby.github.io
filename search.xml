@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>博客搭建</title>
+      <link href="/2022/01/03/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <url>/2022/01/03/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h2 id="博客搭建选择"><a href="#博客搭建选择" class="headerlink" title="博客搭建选择"></a>博客搭建选择</h2><p><a href="www.codesheep.cn">源</a></p><h3 id="动态博客搭建"><a href="#动态博客搭建" class="headerlink" title="动态博客搭建"></a>动态博客搭建</h3><ul><li>自己动手实现博客、后台</li><li>WordPress</li></ul><h3 id="静态博客搭建"><a href="#静态博客搭建" class="headerlink" title="静态博客搭建"></a>静态博客搭建</h3><blockquote><p>静态博客的意思是，纯前端展示，用不到后台。简单高效，容易上手；</p></blockquote><ul><li><p>Hexo</p></li><li><p>Jekyll</p></li><li><p>Hugo</p><p>基于go语言实现的博客框架</p></li><li><p>VuePress</p><p>基于 Vue.js 实现的博客框架</p></li><li><p>Solo</p><p>基于Java实现的博客框架</p></li></ul><h2 id="Hexo-初步"><a href="#Hexo-初步" class="headerlink" title="Hexo 初步"></a>Hexo 初步</h2><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><h4 id="环境需求"><a href="#环境需求" class="headerlink" title="环境需求"></a>环境需求</h4><pre class=" language-txt"><code class="language-txt">Node.jsGit</code></pre><ul><li><p>Node.js</p><p>使用 <code>node -v</code>  <code>npm -v</code> 验证是否安装成功；</p></li><li><p>安装 cnpm</p><p>npm 是国外的，安装 Hexo 比较慢，所以换成 cnpm：</p><p><code>npm i -g cnpm --registry=https://registry.npm.taobao.org</code></p></li></ul><h4 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h4><ul><li><p>使用 cnpm 安装 Hexo</p><p><code>cnpm i -g hexo-cli</code>；</p><p>验证：<code>hexo -v</code></p></li></ul><h3 id="Hexo-配置"><a href="#Hexo-配置" class="headerlink" title="Hexo 配置"></a>Hexo 配置</h3><ol><li><p>新建一个空文件用于存放博客相关文件</p><p>本机下新建<code>E:\Project\HexoBlog</code>  文件夹</p><p><strong>ps:</strong> 但凡博客出错无法解决，只要删除重来即可</p></li><li><p><code>hexo init</code></p><p>he生成 Hexo 博客相关文件；</p><p>可以发现新建的空文件多了一大堆东西；</p><p><strong>本地验证:</strong> <code>hexo s</code>  验证是否能本地运行</p></li><li><p>添加个人博客文件</p><p>在 <code>E:\Project\HexoBlog\source\_posts</code> 文件夹下添加个人的 <code>markdown</code> 文件；</p></li><li><p><code>hexo g</code></p><p>刷新一下博客，将上一步放进来的文件刷新到博客中去。</p><p><strong>ps</strong>：每次对博客修改，都应当 <code>hexo c</code>、<code>hexo g</code> 使修改生效</p><p><strong>验证</strong>：<code>hexo s</code> ,本地验证是否可行</p></li></ol><h3 id="Hexo-部署"><a href="#Hexo-部署" class="headerlink" title="Hexo 部署"></a>Hexo 部署</h3><blockquote><p>本地创建成功，部署到服务器上，方便随时随地访问</p></blockquote><ol><li><p>登录 <code>Github</code> ，新建仓库</p><p><strong>注意：</strong> 仓库名必须为 <code>github用户名.github.io</code></p></li><li><p>安装插件</p><p>将博客部署到 Github的插件：<code>cnpm i --save hexo-deployer-git</code></p></li><li><p>修改 配置文件 <code>_config.yml</code></p><p><strong>注意</strong>：部署之前</p><pre class=" language-xml"><code class="language-xml">git config --global user.email “1667582502@qq.com”git config --global user.name “kailebee”</code></pre><p>将博客托管到 Github 平台：</p><pre class=" language-xml"><code class="language-xml"># 在 deploy 节点下deploy:  type: git  repo: https://github.com/kailebee/kailebee.github.io.git  branch: master</code></pre><p><strong>验证：</strong> <code>https://kailebee.github.io/</code></p></li></ol><h3 id="Hexo-主题美化"><a href="#Hexo-主题美化" class="headerlink" title="Hexo 主题美化"></a>Hexo 主题美化</h3><ul><li><p>更换主题</p><p><strong>下载主题:</strong> <code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code></p><p><strong>更改站点配置文件</strong> <code>_config.yml</code>：<code>theme:next</code></p><p><strong>更换主题的四种风格</strong>：</p><p>主题配置文件：<code>scheme：Gemini</code></p></li><li><p>Next 主题一般配置</p><pre class=" language-xml"><code class="language-xml">override：false #表示是否将主题置为默认样式cache:    enable:true #表示添加缓存功能，这样浏览器后续打开我们的博客网站会更快menu: #设置博客各个页面的相对路径，默认根路径是blog/source  home: / || home  about: /about/ || user  tags: /tags/ || tags  categories: /categories/ || th  archives: /archives/ || archive  #schedule: /schedule/ || calendar #日历  #sitemap: /sitemap.xml || sitemap #站点地图，供搜索引擎爬取  #commonweal: /404/ || heartbeat # 腾讯公益404# Enable/Disable menu icons / item badges.menu_settings:  icons: true # 是否显示各个页面的图标  badges: true # 是否显示分类/标签/归档页的内容量# Schemesscheme: Gemini</code></pre></li><li><p>站点文件基本配置 <code>blog/_config.yml</code> </p><pre class=" language-xml"><code class="language-xml">title: 见渊の博客subtitle: 记录生活中的点点滴滴description: 直到这一刻微笑着说话为止，我至少留下了一公升眼泪keywords:author: 黄飘language: zh-CN # 主题语言timezone: Asia/Shanghai #中国的时区，不要乱改城市# URL## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'url: https://huangpiao.tech #绑定域名root: /  #默认根路径，指向实际的sourcepermalink: :year/:month/:day/:title/permalink_defaults:# Directorysource_dir: sourcepublic_dir: publictag_dir: tagsarchive_dir: archivescategory_dir: categoriescode_dir: downloads/codei18n_dir: :langskip_render: README.md # 部署的时候不包含的文件# Writingnew_post_name: :title.md # 默认的新博文名称default_layout: post # 默认布局titlecase: false # Transform title into titlecaseexternal_link: true # Open external links in new tabfilename_case: 0 #把博客名称改成小写/大写（1,2）render_drafts: false # 是否显示草稿post_asset_folder: false #是否启用资源文件夹（用来存放相对路径图片或文件）relative_link: false # 把链接改为与根目录的相对位址future: truehighlight:  enable: true #是否开启代码高亮  line_number: true #是否增加代码行号  auto_detect: true #自动判断代码语言  tab_replace:  # Home page setting# path: Root path for your blogs index page. (default = '')# per_page: Posts displayed per page. (0 = disable pagination)# order_by: Posts order. (Order by date descending by default)index_generator: #首页博客分布  path: '' #博客的默认路径  per_page: 10 #每页博客数量上限  order_by: -date #博客排序# Date / Time format## Hexo uses Moment.js to parse and display date## You can customize the date format as defined in## http://momentjs.com/docs/#/displaying/format/date_format: YYYY-MM-DD #博客日期格式time_format: HH:mm:ss #博客时间格式# Pagination## Set per_page to 0 to disable paginationper_page: 10 #同上#归档页的分页设置archive_generator: #归档页的配置  per_page: 30 #归档页每页博客数  yearly: true #按年归档  monthly: true #按月归档#标签页的分页设置tag_generator:  per_page: 20 #标签页每页博客数  theme: next6 #选择博客主题，名字为themes中选择的主题文件夹名称# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: #博客部署  type: git  repo:     github: https://github.com/nightmaredimple/nightmaredimple.github.io.git    coding: https://git.coding.net/nightmaredimple/nightmaredimple.git  branch: master</code></pre></li><li><p>添加博客自定义图标</p><p>将制作好的<code>16*16.png</code> <code>32*32.png</code> 等放在 <code>blog/themes/next/sources/images</code> 目录下 ，并修改主题配置文件：</p><pre class=" language-xml"><code class="language-xml">favicon:  small: /images/16x16.png  medium: /images/32x32.png  apple_touch_icon: /images/128x128.png  safari_pinned_tab: /images/logo2.svg</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+          <category> Hexo 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/01/03/hello-world/"/>
+      <url>/2022/01/03/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
